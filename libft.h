@@ -26,5 +26,6 @@ void	*ft_memcpy(void *destination, const void *source, size_t size);
 void	*memmove(void *destination, const void *source, size_t size);
 size_t	strlcat(char *dst, const char *src, size_t dstsize);
 char	*ft_itoa(int n);
+char	*ft_strtrim(char const *s1, char const *set);
 
 #endif
