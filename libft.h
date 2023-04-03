@@ -14,6 +14,7 @@
 # define LIBFT_H
 # include <stdlib.h>
 
+int		ft_atoi(char *theString);
 void	ft_bzero(void *s, size_t n);
 int		ft_isalnum(char character);
 int		ft_isalpha(char character);
