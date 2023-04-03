@@ -36,7 +36,7 @@ int	count_words(char const *src, char separator)
 		if (src[i])
 			cpt++;
 		while (src[i] && src[i] != separator)
-			i++;		
+			i++;
 	}
 	return (cpt);
 }
@@ -59,7 +59,6 @@ char	*fill_word(char const *beg_word, char separator)
 	}
 	return (word);
 }
-
 
 char	**ft_split(char const *src, char separator)
 {
@@ -84,7 +83,7 @@ char	**ft_split(char const *src, char separator)
 			cpt++;
 		}
 		while (src[i] && src[i] != separator)
-			i++;		
+			i++;
 	}
 	splitted_tab[cpt] = NULL;
 	return (splitted_tab);
