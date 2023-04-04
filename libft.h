@@ -20,7 +20,7 @@ int		ft_isalnum(char character);
 int		ft_isalpha(char character);
 int		ft_isascii(int character);
 int		ft_isdigit(char character);
-int		ft_isprint(char character);
+int		ft_isprint(int character);
 char	*ft_itoa(int n);
 void	*ft_memchr(const void *memoryBlock, int searchedChar, size_t size);
 int		ft_memcmp(const void *pointer1, const void *pointer2, size_t size);
