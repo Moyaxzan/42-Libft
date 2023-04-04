@@ -63,52 +63,52 @@ int	main(void)
 
 	//memset
 	printf("memset :\n");
-    int		array1[] = {54, 85, 20, 63, 21};
-    int		array2[] = {54, 85, 20, 63, 21};
-    size_t	size = sizeof(int) * 5;
-    int		length;
-    void	*ptr = ft_memset(array1, 0, size);
+	int		array1[] = {54, 85, 20, 63, 21};
+	int		array2[] = {54, 85, 20, 63, 21};
+	size_t	size = sizeof(int) * 5;
+	int		length;
+	void	*ptr = ft_memset(array1, 0, size);
 	void	*ptr2 = memset(array2, 0, size);
 	//printf("size = %lu\n", size);
-    for( length=0; length<5; length++)
-        printf("%d ", array1[length]);
+	for( length=0; length<5; length++)
+		printf("%d ", array1[length]);
 	printf("== ");
 	for( length=0; length<5; length++)
-        printf("%d ", array2[length]);
+		printf("%d ", array2[length]);
 	ptr++;
 	ptr2++;
-    printf( "\n\n" );
+	printf( "\n\n" );
 
 	//bzero
-    int array3 [] = {54, 85, 20, 63, 21};
-    int array4 [] = {54, 85, 20, 63, 21};
-    printf( "bzero :\n" );
-    ft_bzero(array3, size);
+	int array3 [] = {54, 85, 20, 63, 21};
+	int array4 [] = {54, 85, 20, 63, 21};
+	printf( "bzero :\n" );
+	ft_bzero(array3, size);
 	bzero(array4, size);
-    for( length=0; length<5; length++)
-        printf("%d ", array3[length]);
+	for( length=0; length<5; length++)
+		printf("%d ", array3[length]);
 	printf("== ");
-    for( length=0; length<5; length++)
-        printf("%d ", array4[length]);
-    printf("\n\n");
+	for( length=0; length<5; length++)
+		printf("%d ", array4[length]);
+	printf("\n\n");
 
 	//memcpy
-    printf( "memcpy :\n" );
+	printf( "memcpy :\n" );
 	int	array[] = { 54, 85, 20, 63, 21 };
-    int	*copy;
+	int	*copy;
 	int	*copy2;
-    copy = (int *) malloc(sizeof(int) * 5);
-    copy2 = (int *) malloc(sizeof(int) * 5);
-    memcpy(copy, array, size);
-    for(length=0; length<5; length++)
-        printf("%d ", copy[length]);
-    ft_memcpy(copy2, array, size);
+	copy = (int *) malloc(sizeof(int) * 5);
+	copy2 = (int *) malloc(sizeof(int) * 5);
+	memcpy(copy, array, size);
+	for(length=0; length<5; length++)
+		printf("%d ", copy[length]);
+	ft_memcpy(copy2, array, size);
 	printf("== ");
-    for(length=0; length<5; length++)
-        printf("%d ", copy2[length]);
-    printf( "\n\n" );
-    free(copy);
-    free(copy2);
+	for(length=0; length<5; length++)
+		printf("%d ", copy2[length]);
+	printf( "\n\n" );
+	free(copy);
+	free(copy2);
 
 	//memmove
 
