@@ -13,6 +13,14 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stdlib.h>
+# include <unistd.h>
+# include <fcntl.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}				t_list;
 
 int		ft_atoi(char *theString);
 void	ft_bzero(void *s, size_t n);
@@ -22,11 +30,13 @@ int		ft_isascii(int character);
 int		ft_isdigit(int character);
 int		ft_isprint(int character);
 char	*ft_itoa(int n);
+t_list	*ft_lstnew(void *content);
 void	*ft_memchr(const void *memoryBlock, int searchedChar, size_t size);
 int		ft_memcmp(const void *pointer1, const void *pointer2, size_t size);
 void	*ft_memcpy(void *destination, const void *source, size_t size);
 void	*ft_memmove(void *destination, const void *source, size_t size);
 void	*ft_memset(void *pointer, int value, size_t count);
+void	ft_putchar_fd(char c, int fd);
 char	**ft_split(char const *src, char separator);
 char	*ft_strchr(char *string, int searchedChar);
 char	*ft_strjoin(int size, char **strs, char *sep);
