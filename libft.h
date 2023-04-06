@@ -16,10 +16,10 @@
 
 int		ft_atoi(char *theString);
 void	ft_bzero(void *s, size_t n);
-int		ft_isalnum(char character);
-int		ft_isalpha(char character);
+int		ft_isalnum(int character);
+int		ft_isalpha(int character);
 int		ft_isascii(int character);
-int		ft_isdigit(char character);
+int		ft_isdigit(int character);
 int		ft_isprint(int character);
 char	*ft_itoa(int n);
 void	*ft_memchr(const void *memoryBlock, int searchedChar, size_t size);

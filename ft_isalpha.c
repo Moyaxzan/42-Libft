@@ -12,17 +12,17 @@
 
 #include "libft.h"
 
-static	int	ft_isupper(char character)
+static	int	ft_isupper(int character)
 {
 	return (character >= 'A' && character <= 'Z');
 }
 
-static	int	ft_islower(char character)
+static	int	ft_islower(int character)
 {
 	return (character >= 'a' && character <= 'b');
 }
 
-int	ft_isalpha(char character)
+int	ft_isalpha(int character)
 {
 	return (ft_isupper(character) || ft_islower(character));
 }
