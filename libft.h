@@ -6,7 +6,7 @@
 /*   By: tsaint-p <tsaint-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 15:16:20 by tsaint-p          #+#    #+#             */
-/*   Updated: 2023/03/21 15:16:20 by tsaint-p         ###   ########.fr       */
+/*   Updated: 2023/04/09 00:33:23 by taospa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ int		ft_isdigit(int character);
 int		ft_isprint(int character);
 char	*ft_itoa(int n);
 t_list	*ft_lstnew(void *content);
+int		ft_lstsize(t_list *lst);
 void	*ft_memchr(const void *memoryBlock, int searchedChar, size_t size);
 int		ft_memcmp(const void *pointer1, const void *pointer2, size_t size);
 void	*ft_memcpy(void *destination, const void *source, size_t size);
