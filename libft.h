@@ -6,7 +6,7 @@
 /*   By: tsaint-p <tsaint-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 15:16:20 by tsaint-p          #+#    #+#             */
-/*   Updated: 2023/04/09 00:33:23 by taospa           ###   ########.fr       */
+/*   Updated: 2023/04/09 13:50:22 by taospa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ char	*ft_strjoin(int size, char **strs, char *sep);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcpy(char *dst, char *src, size_t size);
 size_t	ft_strlen(const char *string);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int		ft_strncmp(const char *first, const char *second, size_t length);
 char	*ft_strnstr(char *big, const char *little, size_t len);
 char	*ft_strrchr(char *string, int searchedChar);
