@@ -6,7 +6,7 @@
 /*   By: tsaint-p <tsaint-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 15:16:20 by tsaint-p          #+#    #+#             */
-/*   Updated: 2023/04/09 13:50:22 by taospa           ###   ########.fr       */
+/*   Updated: 2023/04/10 19:24:59 by taospa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ void	*ft_memset(void *pointer, int value, size_t count);
 void	ft_putchar_fd(char c, int fd);
 char	**ft_split(char const *src, char separator);
 char	*ft_strchr(char *string, int searchedChar);
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 char	*ft_strjoin(int size, char **strs, char *sep);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcpy(char *dst, char *src, size_t size);
