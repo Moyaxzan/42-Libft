@@ -75,9 +75,8 @@ int	main(void)
 	printf("== ");
 	for( length=0; length<5; length++)
 		printf("%d ", array2[length]);
-	ptr++;
-	ptr2++;
-	printf( "\n\n" );
+	if (ptr && ptr2)
+		printf( "\n\n" );
 
 	//bzero
 	int array3 [] = {54, 85, 20, 63, 21};
@@ -162,15 +161,34 @@ int	main(void)
 
 	//strncmp
 	printf("strncmp :\n");
-	printf("%d\n\n", ft_strncmp("ouioui", "ouiouj", 5));
+	printf("%d == %d\n\n", strncmp("ouioui", "ouiouj", 5), ft_strncmp("ouioui", "ouiouj", 5));
 
 	//memcmp
+	printf("memcmp :\n%d == %d\n", memcmp("hohoha", "hohoha", 6), ft_memcmp("hohoha", "hohoha", 6));
+	printf("%d == %d\n", memcmp("hohoha", "hohohi", 6), ft_memcmp("hohoha", "hohohi", 6));
+	printf("%d == %d\n", memcmp("hohohi", "hohoha", 6), ft_memcmp("hohohi", "hohoha", 6));
+
 	//strnstr
+	printf("\nstrnstr :\n%s == %s\n", strnstr("je suis cache", "cache", 13), strnstr("je suis cache", "cache", 13));
+	printf("%s == %s\n", strnstr("je suis cache", "cache", 12), strnstr("je suis cache", "cache", 12));
+
 	//atoi
+	printf("\natoi:\n");
+	printf("%d == %d\n", atoi("+1234567"), ft_atoi("+1234567"));
+	printf("%d == %d\n", atoi("12345a67"), ft_atoi("12345a67"));
+	printf("%d == %d\n", atoi("a1234567"), ft_atoi("a1234567"));
+	printf("%d == %d\n", atoi("\t\t1234567"), ft_atoi("\t\t1234567"));
+	printf("%d == %d\n", atoi("-2147483648"), ft_atoi("-2147483648"));
+	printf("%d == %d\n", atoi("--+1234567"), ft_atoi("--+1234567"));
+	
 
 	//substr
+	
 	//strjoin
+	
 	//strtrim
+	
 	//itoa
+	
 	//split
 }

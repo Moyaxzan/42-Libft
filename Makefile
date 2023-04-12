@@ -36,4 +36,10 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all, clean, fclean, re
+test: all
+	cp libft.* ./tests
+	cd tests
+	$(CC) $(CFLAGS) tests/main.c libft.a -o test
+	./test
+
+.PHONY: all, clean, fclean, re, test
