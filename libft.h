@@ -41,7 +41,7 @@ void	ft_putchar_fd(char c, int fd);
 char	**ft_split(char const *src, char separator);
 char	*ft_strchr(char *string, int searchedChar);
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
-char	*ft_strjoin(int size, char **strs, char *sep);
+char	*ft_strjoin(char const *s1, char const *s2);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcpy(char *dst, char *src, size_t size);
 size_t	ft_strlen(const char *string);
