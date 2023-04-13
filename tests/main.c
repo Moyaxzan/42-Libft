@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 23:42:39 by marvin            #+#    #+#             */
-/*   Updated: 2023/03/21 23:42:39 by marvin           ###   ########.fr       */
+/*   Updated: 2023/04/13 22:31:06 by tsaint-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -194,9 +194,28 @@ int	main(void)
 	printf("\nstrjoin:\n");
 	char	*strjoin = ft_strjoin("hihihi", "hohoho");
 	printf("res  = %s\n", strjoin);
+	free(strjoin);
 	//strtrim
 	
 	//itoa
 	
 	//split
+	
+
+
+
+	printf("\n\n---------Bonus Part---------\n\n");
+	//lstnew, lstadd_front, lstsize
+	t_list *front = ft_lstnew("hihi");
+	front->next = ft_lstnew("hahaha");
+	ft_lstadd_front(&front, ft_lstnew("hohoho"));
+	printf("size = %d\n", ft_lstsize(front));
+	
+	t_list *current_cell = front;
+	while (current_cell)
+	{
+		printf(" %s --", (char *) current_cell->content);
+		current_cell = current_cell->next;
+	}
+	printf("\nlast = %s", (char *) ft_lstlast(front)->content);
 }
