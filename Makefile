@@ -10,6 +10,7 @@ OBJS = $(SRCS:.c=.o)
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
+TEST_FLAGS = -g3 -fsanitize=address
 ARFLAGS = -rcs
 RM = rm -rf
 
@@ -39,7 +40,7 @@ re: fclean all
 test: all
 	cp libft.* ./tests
 	cd tests
-	$(CC) $(CFLAGS) tests/main.c libft.a -o test
+	$(CC) $(CFLAGS) $(TEST_FLAGS) tests/main.c libft.a -o test
 	./test
 
 .PHONY: all, clean, fclean, re, test
