@@ -17,6 +17,7 @@
 
 int	main(void)
 {
+	printf("\n\n\n\n---------Libc functions---------\n\n");
 	//isalnum
 	printf("isalnum :\n");
 	printf("%d == %d\n", isalnum('a'), ft_isalnum('a'));
@@ -182,10 +183,17 @@ int	main(void)
 	printf("%d == %d\n", atoi("--+1234567"), ft_atoi("--+1234567"));
 	
 
+
+	printf("\n\n---------Additionnal functions---------\n\n");
 	//substr
-	
+	char *substr1 = ft_substr("hohoho", 2, 2);
+	printf("substr:\nres : %s\n", substr1);
+	free(substr1);
+
 	//strjoin
-	
+	printf("\nstrjoin:\n");
+	char	*strjoin = ft_strjoin("hihihi", "hohoho");
+	printf("res  = %s\n", strjoin);
 	//strtrim
 	
 	//itoa
