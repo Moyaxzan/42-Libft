@@ -6,18 +6,18 @@
 /*   By: tsaint-p <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 14:21:00 by tsaint-p          #+#    #+#             */
-/*   Updated: 2023/05/02 14:51:05 by tsaint-p         ###   ########.fr       */
+/*   Updated: 2023/05/02 16:57:02 by tsaint-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "tests/libft.h"
 
-void ft_lstclear(t_list **lst, void (*del)(void *))
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*current_cell;
 
 	if (!del || !lst)
-		return;
+		return ;
 	current_cell = *lst;
 	while (current_cell)
 	{
