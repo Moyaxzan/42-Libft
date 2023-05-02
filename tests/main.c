@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 23:42:39 by marvin            #+#    #+#             */
-/*   Updated: 2023/04/13 22:31:06 by tsaint-p         ###   ########.fr       */
+/*   Updated: 2023/05/02 14:15:31 by tsaint-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,13 @@
 #include <ctype.h>
 #include <string.h>
 #include "libft.h"
+
+void	free_cont(void *content)
+{
+	content = "ooo";
+	//if (content)
+	//	free(content);
+}
 
 int	main(void)
 {
@@ -114,12 +121,12 @@ int	main(void)
 
 	//strlcpy
 	printf("strlcpy :\n");
-	char *dst1 = malloc(sizeof(char) * 6);
+	//char *dst1 = malloc(sizeof(char) * 6);
 	char *dst2 = malloc(sizeof(char) * 6);
-	strlcpy(dst1, "ouioui", 6);
+	//strlcpy(dst1, "ouioui", 6);
 	ft_strlcpy(dst2, "ouioui", 6);
-	printf("%s == %s\n\n", dst1, dst2);
-
+	printf("%s == %s\n\n", dst2, dst2);
+	free(dst2);
 	//strlcat
 	printf("strlcat :\n");
 	char	*dst3 = malloc(sizeof(char) * 7);
@@ -170,8 +177,8 @@ int	main(void)
 	printf("%d == %d\n", memcmp("hohohi", "hohoha", 6), ft_memcmp("hohohi", "hohoha", 6));
 
 	//strnstr
-	printf("\nstrnstr :\n%s == %s\n", strnstr("je suis cache", "cache", 13), strnstr("je suis cache", "cache", 13));
-	printf("%s == %s\n", strnstr("je suis cache", "cache", 12), strnstr("je suis cache", "cache", 12));
+	//printf("\nstrnstr :\n%s == %s\n", strnstr("je suis cache", "cache", 13), ft_strnstr("je suis cache", "cache", 13));
+	//printf("%s == %s\n", strnstr("je suis cache", "cache", 12), ft_strnstr("je suis cache", "cache", 12));
 
 	//atoi
 	printf("\natoi:\n");
@@ -205,7 +212,7 @@ int	main(void)
 
 
 	printf("\n\n---------Bonus Part---------\n\n");
-	//lstnew, lstadd_front, lstsize
+	//lstnew, lstadd_front, lstsize, lstdelone
 	t_list *front = ft_lstnew("hihi");
 	front->next = ft_lstnew("hahaha");
 	ft_lstadd_front(&front, ft_lstnew("hohoho"));
@@ -217,5 +224,17 @@ int	main(void)
 		printf(" %s --", (char *) current_cell->content);
 		current_cell = current_cell->next;
 	}
-	printf("\nlast = %s", (char *) ft_lstlast(front)->content);
+	printf("\nfront = %s", (char *) front->content);
+	printf("\nlast = %s\n", (char *) ft_lstlast(front)->content);
+	fflush(stdout);
+	ft_lstdelone(front->next->next, free_cont);
+	front->next->next = 0;
+	current_cell = front;
+	while (current_cell)
+	{
+		printf(" %s --", (char *) current_cell->content);
+		current_cell = current_cell->next;
+	}
+	ft_lstdelone(front->next, free_cont);
+	ft_lstdelone(front, &free_cont);
 }
