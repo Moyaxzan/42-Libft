@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 23:42:39 by marvin            #+#    #+#             */
-/*   Updated: 2023/05/02 14:15:31 by tsaint-p         ###   ########.fr       */
+/*   Updated: 2023/05/02 14:53:53 by tsaint-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -226,7 +226,6 @@ int	main(void)
 	}
 	printf("\nfront = %s", (char *) front->content);
 	printf("\nlast = %s\n", (char *) ft_lstlast(front)->content);
-	fflush(stdout);
 	ft_lstdelone(front->next->next, free_cont);
 	front->next->next = 0;
 	current_cell = front;
@@ -235,6 +234,6 @@ int	main(void)
 		printf(" %s --", (char *) current_cell->content);
 		current_cell = current_cell->next;
 	}
-	ft_lstdelone(front->next, free_cont);
-	ft_lstdelone(front, &free_cont);
+	ft_lstclear(&front, &free_cont);
+	printf("\nfirst = %p\n", front);
 }
