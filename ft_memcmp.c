@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: taospa <taospa@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tsaint-p <tsaint-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 20:51:27 by taospa            #+#    #+#             */
-/*   Updated: 2023/05/03 17:47:43 by tsaint-p         ###   ########.fr       */
+/*   Updated: 2023/05/03 18:54:12 by tsaint-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_memcmp(const void *pointer1, const void *pointer2, size_t size)
 {
 	unsigned char				*p1;
 	unsigned char				*p2;
-	unsigned long int		i;
+	unsigned long int			i;
 
 	p1 = (unsigned char *) pointer1;
 	p2 = (unsigned char *) pointer2;
