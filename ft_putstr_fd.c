@@ -6,7 +6,7 @@
 /*   By: taospa <taospa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 22:35:24 by taospa            #+#    #+#             */
-/*   Updated: 2023/04/07 00:35:14 by taospa           ###   ########.fr       */
+/*   Updated: 2023/05/03 14:32:10 by tsaint-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,5 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int	i;
-
-	i = 0;
-	while (s[i])
-		write(fd, &(s[i++]), 1);
+	write(fd, s, ft_strlen(s));
 }

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isalpha.c                                          :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsaint-p <tsaint-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 15:02:51 by tsaint-p          #+#    #+#             */
-/*   Updated: 2023/03/21 15:02:51 by tsaint-p         ###   ########.fr       */
+/*   Updated: 2023/05/03 13:57:44 by tsaint-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static	int	ft_isupper(int character)
 
 static	int	ft_islower(int character)
 {
-	return (character >= 'a' && character <= 'b');
+	return (character >= 'a' && character <= 'z');
 }
 
 int	ft_isalpha(int character)

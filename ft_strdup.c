@@ -1,37 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: taospa <taospa@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tsaint-p <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/02 19:36:06 by taospa            #+#    #+#             */
-/*   Updated: 2023/05/03 15:56:20 by tsaint-p         ###   ########.fr       */
+/*   Created: 2023/05/03 16:09:16 by tsaint-p          #+#    #+#             */
+/*   Updated: 2023/05/03 17:27:03 by tsaint-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "tests/libft.h"
+#include <stdio.h>
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strdup(const char *s)
 {
-	size_t	len;
-	char	*res;
-	int		i;
-	int		j;
+	unsigned long	i;
+	char			*res;
 
-	if (!s1 || !s2)
+	if (!s)
 		return (0x0);
-	i = 0;
-	j = 0;
-	len = ft_strlen(s1) + ft_strlen(s2);
-	res = malloc(sizeof(char) * (len + 1));
+	i = ft_strlen(s) + 1;
+	res = malloc(sizeof(char) * i);
 	if (!res)
 		return (0x0);
-	while (s1[i])
-		res[j++] = s1[i++];
-	i = 0;
-	while (s2[i])
-		res[j++] = s2[i++];
-	res[j] = '\0';
+	ft_memcpy(res, s, i);
 	return (res);
 }

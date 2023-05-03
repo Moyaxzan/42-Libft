@@ -6,13 +6,13 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 16:21:27 by marvin            #+#    #+#             */
-/*   Updated: 2023/03/27 16:21:27 by marvin           ###   ########.fr       */
+/*   Updated: 2023/05/03 15:54:59 by tsaint-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	len_word(const char *beg_word, char separator)
+static int	len_word(const char *beg_word, char separator)
 {
 	int	i;
 
@@ -22,7 +22,7 @@ int	len_word(const char *beg_word, char separator)
 	return (i);
 }
 
-int	count_words(char const *src, char separator)
+static int	count_words(char const *src, char separator)
 {
 	int	i;
 	int	cpt;
@@ -32,7 +32,7 @@ int	count_words(char const *src, char separator)
 	while (src[i])
 	{
 		while (src[i] && src[i] == separator)
-			i++;
+			i++; 
 		if (src[i])
 			cpt++;
 		while (src[i] && src[i] != separator)
@@ -41,7 +41,7 @@ int	count_words(char const *src, char separator)
 	return (cpt);
 }
 
-char	*fill_word(char const *beg_word, char separator)
+static char	*fill_word(char const *beg_word, char separator)
 {
 	char	*word;
 	int		size_word;
@@ -57,6 +57,7 @@ char	*fill_word(char const *beg_word, char separator)
 		word[i] = beg_word[i];
 		i++;
 	}
+	word[i] = 0;
 	return (word);
 }
 
@@ -66,6 +67,8 @@ char	**ft_split(char const *src, char separator)
 	int		i;
 	int		cpt;
 
+	if (!src)
+		return (0x0);
 	i = 0;
 	cpt = 0;
 	splitted_tab = malloc(sizeof(char *) * (count_words(src, separator) + 1));

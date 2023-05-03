@@ -6,7 +6,7 @@
 /*   By: taospa <taospa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 20:51:27 by taospa            #+#    #+#             */
-/*   Updated: 2023/04/03 22:24:18 by taospa           ###   ########.fr       */
+/*   Updated: 2023/05/03 17:47:43 by tsaint-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 int	ft_memcmp(const void *pointer1, const void *pointer2, size_t size)
 {
-	char					*p1;
-	char					*p2;
+	unsigned char				*p1;
+	unsigned char				*p2;
 	unsigned long int		i;
 
-	p1 = (char *) pointer1;
-	p2 = (char *) pointer2;
+	p1 = (unsigned char *) pointer1;
+	p2 = (unsigned char *) pointer2;
 	i = 0;
 	while (i < size - 1 && *p1 == *p2)
 	{

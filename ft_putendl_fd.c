@@ -6,7 +6,7 @@
 /*   By: taospa <taospa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 22:41:16 by taospa            #+#    #+#             */
-/*   Updated: 2023/04/07 00:37:01 by taospa           ###   ########.fr       */
+/*   Updated: 2023/05/03 16:08:36 by tsaint-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,8 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	int	i;
-
-	i = 0;
-	while (s[i])
-		write(fd, &(s[i++]), 1);
+	if (!s)
+		return ;
+	ft_putstr_fd(s, fd);
 	ft_putchar_fd('\n', fd);
 }

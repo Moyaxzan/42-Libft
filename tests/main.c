@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 23:42:39 by marvin            #+#    #+#             */
-/*   Updated: 2023/05/02 14:53:53 by tsaint-p         ###   ########.fr       */
+/*   Updated: 2023/05/03 18:23:49 by tsaint-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -205,11 +205,55 @@ int	main(void)
 	//strtrim
 	
 	//itoa
-	
+	printf("\nitoa:\n");
+	char *itoa = ft_itoa(2147483647);
+	printf("2147483647 = %s\n", itoa);
+	free(itoa);
+	itoa = ft_itoa(-2147483648);
+	printf("-2147483648 = %s\n", itoa);
+	free(itoa);
+	itoa = ft_itoa(479830);
+	printf("479830 = %s\n", itoa);
+	free(itoa);
+	itoa = ft_itoa(1083648);
+	printf("1083648 = %s\n", itoa);
+	free(itoa);
+	itoa = ft_itoa(-0);
+	printf("0 = %s\n", itoa);
+	free(itoa);
+
 	//split
 	
 
+	//putnbr_fd
+	
+	printf("\nputnbr:\n");
+	ft_putnbr_fd(-10923840, 1);
+	printf("\n");
 
+
+	//calloc
+	
+	printf("\ncalloc:\n");
+	int *callc = 0x0;
+
+	callc = (int *) ft_calloc(3, sizeof(int));
+	printf("%d %d %d\n%lu\n", callc[0], callc[1], callc[2], sizeof(int));
+	callc[0] = 1;
+	callc[1] = 2;
+	callc[2] = 3;
+	printf("%d %d %d\n", callc[0], callc[1], callc[2]);
+	free(callc);
+
+	// strdup
+	printf("\nstrdup\n");
+	char *str;
+	char *tmp = "I malloc so I am.";
+
+	str = ft_strdup(tmp);
+	if (!strcmp(str, tmp))
+		printf("strdup is yes\n");
+	free(str);
 
 	printf("\n\n---------Bonus Part---------\n\n");
 	//lstnew, lstadd_front, lstsize, lstdelone

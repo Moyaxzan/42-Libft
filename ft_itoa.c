@@ -6,7 +6,7 @@
 /*   By: taospa <taospa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 17:51:19 by taospa            #+#    #+#             */
-/*   Updated: 2023/03/30 22:33:01 by taospa           ###   ########.fr       */
+/*   Updated: 2023/05/03 15:33:57 by tsaint-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ static char	*malloc_num(long int n, int *len)
 {
 	char	*res;
 
+	if (!n)
+		++(*len);
 	if (n < 0)
 		(*len)++;
 	while (n)
@@ -23,7 +25,7 @@ static char	*malloc_num(long int n, int *len)
 		(*len)++;
 		n = n / 10;
 	}
-	res = malloc(sizeof(char) * *len);
+	res = malloc(sizeof(char) * (*len));
 	return (res);
 }
 
@@ -39,13 +41,15 @@ char	*ft_itoa(int n)
 	if (!res)
 		return (0x0);
 	nbr = n;
-	res[len] = '\0';
+	res[len - 1] = '\0';
 	len = len - 2;
 	if (nbr < 0)
 	{
 		res[0] = '-';
 		nbr = -nbr;
 	}
+	res[len--] = (nbr % 10) + '0';
+	nbr = nbr / 10;
 	while (nbr)
 	{
 		res[len--] = (nbr % 10) + '0';
