@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 16:21:27 by marvin            #+#    #+#             */
-/*   Updated: 2023/05/03 15:54:59 by tsaint-p         ###   ########.fr       */
+/*   Updated: 2023/05/03 18:51:41 by tsaint-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static int	count_words(char const *src, char separator)
 	while (src[i])
 	{
 		while (src[i] && src[i] == separator)
-			i++; 
+			i++;
 		if (src[i])
 			cpt++;
 		while (src[i] && src[i] != separator)
@@ -64,29 +64,26 @@ static char	*fill_word(char const *beg_word, char separator)
 char	**ft_split(char const *src, char separator)
 {
 	char	**splitted_tab;
-	int		i;
 	int		cpt;
 
 	if (!src)
 		return (0x0);
-	i = 0;
 	cpt = 0;
 	splitted_tab = malloc(sizeof(char *) * (count_words(src, separator) + 1));
 	if (!splitted_tab)
 		return (NULL);
-	while (src[i])
+	while (*src)
 	{
-		while (src[i] && src[i] == separator)
-			i++;
-		if (src[i])
+		while (*src && *src == separator)
+			++src;
+		if (*src)
 		{
-			splitted_tab[cpt] = fill_word(&(src[i]), separator);
-			if (!splitted_tab[cpt])
+			splitted_tab[cpt] = fill_word(src, separator);
+			if (!splitted_tab[cpt++])
 				return (NULL);
-			cpt++;
 		}
-		while (src[i] && src[i] != separator)
-			i++;
+		while (*src && *src != separator)
+			++src;
 	}
 	splitted_tab[cpt] = NULL;
 	return (splitted_tab);
