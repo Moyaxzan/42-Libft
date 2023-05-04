@@ -6,7 +6,7 @@
 /*   By: taospa <taospa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 15:34:49 by taospa            #+#    #+#             */
-/*   Updated: 2023/05/04 14:56:05 by tsaint-p         ###   ########.fr       */
+/*   Updated: 2023/05/04 18:12:36 by tsaint-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ static int	to_trim(char c, char const *set)
 static char	*fill_trim(char const *s1, size_t len_res, int beg_cpy)
 {
 	unsigned long	i;
-	char		*res;
-	
+	char			*res;
+
 	res = malloc(sizeof(char) * (len_res + 1));
 	if (!res)
 		return (0x0);
@@ -56,7 +56,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (len_s1 - i - 1 && to_trim(s1[len_s1 - i - 1], set))
 		++i;
 	if ((unsigned long)i >= len_s1 - 1)
-		return(fill_trim(s1, 0, 0));
+		return (fill_trim(s1, 0, 0));
 	len_res = len_s1 - i;
 	i = 0;
 	while (s1[i] && to_trim(s1[i], set))
