@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 23:42:39 by marvin            #+#    #+#             */
-/*   Updated: 2023/05/03 18:23:49 by tsaint-p         ###   ########.fr       */
+/*   Updated: 2023/05/04 14:47:16 by tsaint-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,23 +127,19 @@ int	main(void)
 	ft_strlcpy(dst2, "ouioui", 6);
 	printf("%s == %s\n\n", dst2, dst2);
 	free(dst2);
+
 	//strlcat
-	printf("strlcat :\n");
-	char	*dst3 = malloc(sizeof(char) * 7);
-	dst3[0] = '1';
-	dst3[1] = '2';
-	dst3[2] = '3';
-	dst3[3] = 0;
-	char	*dst4 = malloc(sizeof(char) * 7);
-	dst4[0] = '1';
-	dst4[1] = '2';
-	dst4[2] = '3';
-	dst4[3] = 0;
-	ft_strlcat(dst3, "456", 7);
-	ft_strlcat(dst4, "456", 7);
-	printf("%s == %s\n\n", dst3, dst4);
-	free(dst3);
-	free(dst4);
+	printf("\nstrlcat\n");
+	char *str3 = "the cake is a lie !\0I'm hidden lol\r\n";
+	char buff2[0xF00] = "there is no stars in the sky";
+	size_t max = strlen("the cake is a lie !\0I'm hidden lol\r\n") + 4;
+	size_t r2 = ft_strlcat(buff2, str3, max);
+
+	printf("res1 = %lu\n", r2);
+	char s2[4] = "";
+	r2 = ft_strlcat(s2, "thx to ntoniolo for this test !", 4);
+	printf("res2 = %lu\n", r2);
+
 
 	//toupper
 	printf("toupper :\n");
@@ -203,7 +199,13 @@ int	main(void)
 	printf("res  = %s\n", strjoin);
 	free(strjoin);
 	//strtrim
-	
+	printf("\nstrtrim:\n");
+	char *ret = ft_strtrim("  \t \t \n   \n\n\n\t", " \n\t");
+
+	if (!strcmp(ret, ""))
+		printf("strtrim is good \n");
+	free(ret);
+
 	//itoa
 	printf("\nitoa:\n");
 	char *itoa = ft_itoa(2147483647);
