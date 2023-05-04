@@ -6,7 +6,7 @@
 /*   By: taospa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/09 13:23:29 by taospa            #+#    #+#             */
-/*   Updated: 2023/04/10 19:27:30 by taospa           ###   ########.fr       */
+/*   Updated: 2023/05/04 15:47:28 by tsaint-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	len = ft_strlen(s);
 	res = malloc(sizeof(char) * (len + 1));
+	if (!res)
+		return (0x0);
 	i = 0;
 	while (i < len)
 	{
