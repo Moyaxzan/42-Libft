@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 16:21:27 by marvin            #+#    #+#             */
-/*   Updated: 2023/05/03 18:51:41 by tsaint-p         ###   ########.fr       */
+/*   Updated: 2023/05/04 19:37:26 by tsaint-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ static char	*fill_word(char const *beg_word, char separator)
 
 	i = 0;
 	size_word = len_word(beg_word, separator);
-	word = malloc(sizeof(char) * size_word);
+	word = malloc(sizeof(char) * (size_word + 1));
 	if (!word)
 		return (NULL);
 	while (beg_word[i] && beg_word[i] != separator)
