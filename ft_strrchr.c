@@ -3,26 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: taospa <taospa@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tsaint-p <tsaint-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 14:24:59 by taospa            #+#    #+#             */
-/*   Updated: 2023/04/03 14:28:43 by taospa           ###   ########.fr       */
+/*   Updated: 2023/05/04 19:14:27 by tsaint-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(char *string, int searchedChar)
+char	*ft_strrchr(char *s, int c)
 {
 	int	i;
 
 	i = 0;
-	while (string[i])
+	while (s[i])
 		i++;
 	while (i >= 0)
 	{
-		if (string[i] == searchedChar)
-			return (&(string[i]));
+		if (s[i] == c)
+			return (&(s[i]));
 		i--;
 	}
 	return (0x0);
