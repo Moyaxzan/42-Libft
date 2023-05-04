@@ -6,7 +6,7 @@
 /*   By: tsaint-p <tsaint-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 14:16:05 by taospa            #+#    #+#             */
-/*   Updated: 2023/05/04 19:09:36 by tsaint-p         ###   ########.fr       */
+/*   Updated: 2023/05/04 19:57:20 by tsaint-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strchr(char *s, int c)
 	i = 0;
 	while (s[i] || !c)
 	{
-		if (s[i] == c)
+		if (s[i] == (unsigned char)c)
 			return (&(s[i]));
 		i++;
 	}
