@@ -6,7 +6,7 @@
 /*   By: taospa <taospa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 18:40:45 by taospa            #+#    #+#             */
-/*   Updated: 2023/05/05 11:16:15 by tsaint-p         ###   ########.fr       */
+/*   Updated: 2023/05/05 11:35:21 by tsaint-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char				*substring;
 	unsigned int		i;
-	unsigned long	len_src;
+	unsigned long		len_src;
 
 	if (!s)
 		return (0x0);
