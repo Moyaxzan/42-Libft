@@ -6,13 +6,11 @@
 /*   By: taospa <taospa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 15:34:49 by taospa            #+#    #+#             */
-/*   Updated: 2023/05/04 18:12:36 by tsaint-p         ###   ########.fr       */
+/*   Updated: 2023/05/05 13:01:21 by tsaint-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 static int	to_trim(char c, char const *set)
 {

@@ -6,13 +6,12 @@
 /*   By: taospa <taospa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 18:40:45 by taospa            #+#    #+#             */
-/*   Updated: 2023/05/05 11:35:21 by tsaint-p         ###   ########.fr       */
+/*   Updated: 2023/05/05 13:01:35 by tsaint-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-//veriff if negative start or len ?
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char				*substring;
