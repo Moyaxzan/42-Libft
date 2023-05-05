@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 23:42:39 by marvin            #+#    #+#             */
-/*   Updated: 2023/05/04 14:47:16 by tsaint-p         ###   ########.fr       */
+/*   Updated: 2023/05/05 11:05:00 by tsaint-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,10 @@
 
 void	free_cont(void *content)
 {
-	content = "ooo";
+	if (ft_strncmp(content, "", 1))
+		content = "empty";
+	else
+		content = "ooo";
 	//if (content)
 	//	free(content);
 }
@@ -189,7 +192,7 @@ int	main(void)
 
 	printf("\n\n---------Additionnal functions---------\n\n");
 	//substr
-	char *substr1 = ft_substr("hohoho", 2, 2);
+	char *substr1 = ft_substr("BONJOUR LES HARICOTS !", 8, 14);
 	printf("substr:\nres : %s\n", substr1);
 	free(substr1);
 
